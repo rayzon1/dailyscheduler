@@ -1,0 +1,6 @@
+/*School*/
+class School {
+    constructor(){
+        
+    }
+}

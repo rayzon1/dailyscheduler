@@ -1,0 +1,6 @@
+/*Play*/
+class Play {
+    constructor(){
+        
+    }
+}
