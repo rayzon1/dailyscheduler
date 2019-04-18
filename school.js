@@ -1,6 +1,6 @@
 /*School*/
 class School {
     constructor(){
-        
+
     }
 }

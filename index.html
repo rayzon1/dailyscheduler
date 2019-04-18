@@ -3,18 +3,38 @@
   <head>
     <meta charset="UTF-8">
     <title>title</title>
+    <link rel="stylesheet" href="styles.css">
+    <script
+    src="https://code.jquery.com/jquery-3.4.0.min.js"
+    integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+    crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="person.js"></script>
+    <script src="play.js"></script>
+    <script src="school.js"></script>
+    <script src="work.js"></script>
   </head>
   <body>
     <h1>Practicing Classes and objects by creating a daily scheduler</h1>
     <h3>by. Gerardo Keys</h3>
-    <table>
-        <thead></thead>
-        <tbody>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tbody>
-    </table>
+    <div id="container">
+      <label for="name">Name: <input type="text" name="name" id="name"></label><br>
+      <label for="age">Age: <input type="text" name="age" id="age"></label><br>
+      <label for="phone">phone: <input type="text" name="phone" id="phone"></label><br>
+      <button id="play" name="play">Play</button>
+      <button id="work" name="work">Work</button>
+      <button id="school" name="school">School</button>
+
+    </div>
   </body>
+
+  <script>
+   replacePhone();
+   getNumber()
+   callBack(getNumber);
+    
+  
+  
+  
+  </script>
 </html>

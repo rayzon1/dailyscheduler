@@ -1,1 +1,6 @@
 /*Work*/
+class Work {
+    constructor(){
+        
+    }
+}
