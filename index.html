@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <title>title</title>
     <link rel="stylesheet" href="styles.css">
+    
     <script
     src="https://code.jquery.com/jquery-3.4.0.min.js"
     integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
     crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
     <script src="main.js"></script>
     <script src="person.js"></script>
     <script src="play.js"></script>
@@ -17,24 +22,27 @@
   <body>
     <h1>Practicing Classes and objects by creating a daily scheduler</h1>
     <h3>by. Gerardo Keys</h3>
-    <div id="container">
+    <form id="container">
       <label for="name">Name: <input type="text" name="name" id="name"></label><br>
       <label for="age">Age: <input type="text" name="age" id="age"></label><br>
-      <label for="phone">phone: <input type="text" name="phone" id="phone"></label><br>
+      <label for="phone">Phone: <input type="text" name="phone" id="phone"></label><br>
+      <input type="submit" id="submit">
       <button id="play" name="play">Play</button>
       <button id="work" name="work">Work</button>
       <button id="school" name="school">School</button>
-
-    </div>
+    </form>
+    <div id="results"></div>
   </body>
 
   <script>
     const people = [];
     const person = new Person();
     const listeners = new Listeners();
-    listeners.replacePhone();
-    //listeners.getNumber();
-    //  console.log(listeners.getNumber().value);
+    $('button').hide();
+    listeners.checkName();
+    listeners.checkPhone();
+    listeners.showSubmit();
+    
     person.getInformation();
     people.push(person);
 
