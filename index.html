@@ -15,22 +15,22 @@
   crossorigin="anonymous"></script>
     <script src="main.js"></script>
     <script src="person.js"></script>
-    <script src="play.js"></script>
+    <!-- <script src="play.js"></script>
     <script src="school.js"></script>
-    <script src="work.js"></script>
+    <script src="work.js"></script> -->
   </head>
   <body>
     <h1>Practicing Classes and objects by creating a daily scheduler</h1>
     <h3>by. Gerardo Keys</h3>
-    <form id="container">
+    <form id="container" action="test.txt">
       <label for="name">Name: <input type="text" name="name" id="name"></label><br>
       <label for="age">Age: <input type="text" name="age" id="age"></label><br>
       <label for="phone">Phone: <input type="text" name="phone" id="phone"></label><br>
       <input type="submit" id="submit">
-      <button id="play" name="play">Play</button>
-      <button id="work" name="work">Work</button>
-      <button id="school" name="school">School</button>
+      
+      
     </form>
+    <input type="button" onclick="sendAjax()">Click Me!
     <div id="results"></div>
   </body>
 
@@ -43,9 +43,30 @@
     listeners.checkPhone();
     listeners.showSubmit();
     
-    person.getInformation();
     people.push(person);
 
+    // var xhr = new XMLHttpRequest();
+    // xhr.onreadystatechange = function () {
+    //   if (xhr.readyState == 4) {
+    //     document.getElementById('results').innerHTML = xhr.responseText;
+    //   }
+    // };
+    
+    // function sendAjax(){
+    //   xhr.open('GET', 'test.txt');
+    //   xhr.send();
+    // }
+    let names = listeners.showSubmit();
+    let url = 'test.txt';
+    let str = 'This is a String';
+    //$('#results').load('test.txt');
+    $.post(url, function (data, status) {
+      $('#results').html('Data:' + data + "\nStatus: " + status);
+    });
+    
+    
+    
+  
    
 
    

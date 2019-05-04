@@ -1,6 +1,0 @@
-/*Work*/
-class Work {
-    constructor(){
-        
-    }
-}

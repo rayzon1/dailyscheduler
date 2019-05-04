@@ -1,6 +1,0 @@
-/*School*/
-class School {
-    constructor(){
-
-    }
-}

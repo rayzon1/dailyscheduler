@@ -26,16 +26,10 @@ class Person {
 
     
 
-    getInformation() {
-
-        $('#play').on("click", () => {
-            this.name = $('#name').val();
-            //this.checkName() ? $('#name').val() = "" : this.name = null && $('#name').css("border", "1px solid red"); 
-            // this.checkAge() == false ? this.age = $('#age').val() : $('#age').css("border", "1px solid red");
-            // this.checkPhone() ? this.phone = $('#phone').val() : $('#phone').css("border", "1px solid red");;
-            
-        
-        })
+    getName(arr) {
+        // get name information from input value via submit listener
+        // name will be added to the constructor for this person
+    
     }
 
    
@@ -87,7 +81,7 @@ class Listeners extends Person {
 
     showSubmit() {
 
-
+        let names = [];
         // use jquery ui .effect() function to shake input box if border-color red upon 
         // submit.
         $("#submit").on("click", function() {
@@ -95,10 +89,18 @@ class Listeners extends Person {
             $.each($("input[type='text']"), function (){
                 if($(this).css('border-color') == 'rgb(255, 0, 0)'){
                     $(this).effect("shake", {times:2}, 200);
+                } else {
+                    if ($(this).val() != '') {
+                        if ($(this).attr('id') == 'name') {
+                            names.push($(this).val());
+                            console.log(names);
+                        }
+                    } 
                 }
             })
             
         });
+        return names;
        
     }
 
